@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Middle Earth</string>
+    <string name="question1">Who created the world of middle-earth?</string>
+    <string-array name="question1">
+        <item>J R R Tolkien</item>
+        <item>George R R Martin</item>
+    </string-array>
+    <string name="question2">Who were the oldest beings in middle-earth?</string>
+    <string-array name="question2">
+        <item>Elves</item>
+        <item>Hobbits</item>
+        <item>Dwarves</item>
+        <item>Men</item>
+        <item>Ents</item>
+    </string-array>
+    <string name="question3">How many distinct Elven settlements were there?</string>
+    <string name="question4">How many of the great rings were given to the race of men?</string>
+    <string name="question5">Which craft were the Dwarves best known for?</string>
+    <string-array name="question5">
+        <item>Embroidery</item>
+        <item>Smithing</item>
+        <item>Fishing</item>
+        <item>Sculpting</item>
+    </string-array>
+    <string name="question6">Who were the sons of the steward of Gondor?</string>
+    <string-array name="question6">
+        <item>Fraudrin</item>
+        <item>Faramir</item>
+        <item>Boromir</item>
+        <item>Peregrin</item>
+    </string-array>
+    <string name="question7">How many of the ring-bearers remained in middle-earth after the fall of Mordor?</string>
+</resources>

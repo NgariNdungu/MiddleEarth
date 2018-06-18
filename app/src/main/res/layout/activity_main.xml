@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <!-- question 1 - multiple choice -->
+        <TextView
+            android:id="@+id/question1_label"
+            style="@style/labelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question1"
+            app:layout_constraintBottom_toTopOf="@id/question1_options"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/question1_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/question1_label">
+
+            <RadioButton
+                android:id="@+id/question1_option1"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/question1_option2"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <!-- question 2 - multiple choice -->
+        <RadioGroup
+            android:id="@+id/question2_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/question1_options">
+
+            <TextView
+                style="@style/labelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/question2_options"
+                android:text="@string/question2" />
+
+            <RadioButton
+                android:id="@+id/question2_option1"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/question2_option2"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/question2_option3"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/question2_option4"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/question2_option5"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <!-- question 3 -->
+        <TextView
+            android:id="@+id/question3_label"
+            style="@style/labelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/question3_ans"
+            android:text="@string/question3"
+            app:layout_constraintTop_toBottomOf="@id/question2_options" />
+
+        <EditText
+            android:id="@+id/question3_ans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/question3_label" />
+
+        <!-- question 4-->
+        <TextView
+            android:id="@+id/question4_label"
+            style="@style/labelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/question4_ans"
+            android:text="@string/question4"
+            app:layout_constraintTop_toBottomOf="@id/question3_ans" />
+
+        <EditText
+            android:id="@+id/question4_ans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/question4_label" />
+
+        <!-- question 5 - multiple answers -->
+        <TextView
+            android:id="@+id/question5_label"
+            style="@style/labelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question5"
+            app:layout_constraintTop_toBottomOf="@id/question4_ans" />
+
+        <CheckBox
+            android:id="@+id/question5_option1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/question5_label"/>
+
+        <CheckBox
+            android:id="@+id/question5_option2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/question5_option1"/>
+
+        <CheckBox
+            android:id="@+id/question5_option3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/question5_option2"/>
+
+        <CheckBox
+            android:id="@+id/question5_option4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/question5_option3"/>
+
+        <!-- question 6 - multiple answers -->
+        <TextView
+            android:id="@+id/question6_label"
+            style="@style/labelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/question5_option4"
+            android:text="@string/question6" />
+
+        <CheckBox
+            android:id="@+id/question6_option1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/question6_label"
+            android:text="@array/question6"/>
+
+        <CheckBox
+            android:id="@+id/question6_option2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/question6_option1"/>
+
+        <CheckBox
+            android:id="@+id/question6_option3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/question6_option2"/>
+
+        <CheckBox
+            android:id="@+id/question6_option4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/question6_option3"/>
+
+        <!-- question 7-->
+        <TextView
+            android:id="@+id/question7_label"
+            style="@style/labelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/question7_ans"
+            android:text="@string/question7"
+            app:layout_constraintTop_toBottomOf="@id/question6_option4" />
+
+        <EditText
+            android:id="@+id/question7_ans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/question7_label" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
