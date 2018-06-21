@@ -2,8 +2,12 @@ package com.createchs.middleearth;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,10 +15,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        RadioGroup question1Radios = (RadioGroup) findViewById(R.id.question1_options);
-        String[] question1Options = getResources().getStringArray(R.array.question1);
-        for (int i = 0; i < question1Radios.getChildCount(); i++) {
-            ((RadioButton) question1Radios.getChildAt(i)).setText(question1Options[i]);
-        }
+    }
+
+    public void getScores(View view) {
+     /*   HashMap answers = new HashMap();
+        answers.*/
     }
 }
