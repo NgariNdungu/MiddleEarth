@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import java.util.HashMap;
 
@@ -21,52 +22,66 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+
     public void getScores(View view) {
-        int[] q5answers = {R.id.question5_option2, R.id.question5_option4};
-        int[] q6answers = {R.id.question6_option3, R.id.question6_option3};
-        HashMap answers = new HashMap();
-        answers.put("q1", R.id.question1_option1);
-        answers.put("q2", R.id.question2_option5);
-        answers.put("q3", 3);
-        answers.put("q4", 5);
-        answers.put("q5", q5answers);
-        answers.put("q6", q6answers);
-        answers.put("q7", 0);
-
-
         int score = 0;
-
-
-        boolean questionOneIsCorrect = ((RadioButton) findViewById((int) answers.get("q1"))).isChecked();
-        boolean questionTwoIsCorrect = ((RadioButton) findViewById((int) answers.get("q2"))).isChecked();
-
-        EditText questionThreeAns = (EditText) findViewById(R.id.question3_ans);
-        boolean questionThreeIsCorrect = questionThreeAns.getText().toString().equals(
-                answers.get("q3").toString());
-        EditText questionFourAns = (EditText) findViewById(R.id.question4_ans);
-        boolean questionFourIsCorrect = questionFourAns.getText().toString().equals(
-                answers.get("q4").toString());
-        boolean[] questionFiveIsCorrect = {
-                ((CheckBox) findViewById(q5answers[0])).isChecked(),
-                ((CheckBox) findViewById(q5answers[1])).isChecked()
+        int[] answers = {
+                R.id.question1_option1,
+                R.id.question2_option5,
+                3,
+                5,
+                R.id.question5_option2,
+                R.id.question5_option4,
+                R.id.question6_option2,
+                R.id.question6_option3,
+                0
         };
-        boolean[] questionSixIsCorrect = {
-                ((CheckBox) findViewById(q6answers[0])).isChecked(),
-                ((CheckBox) findViewById(q6answers[1])).isChecked()
+        String[] viewTypes = {
+                "RadioButton",
+                "RadioButton",
+                "EditText",
+                "EditText",
+                "CheckBox",
+                "CheckBox",
+                "CheckBox",
+                "CheckBox",
+                "EditText"
         };
-        EditText questionSevenAns = (EditText) findViewById(R.id.question7_ans);
-        boolean questionSevenIsCorrect = questionSevenAns.getText().toString().equals(
-                answers.get("q7").toString()
-        );
+        int[] editViews = {
+                R.id.question3_ans,
+                R.id.question4_ans,
+                R.id.question7_ans
+        };
+        int editsIndex = 0;
+        for (int i = 0; i < answers.length; i++) {
+            switch (viewTypes[i]) {
+                case "RadioButton":
+                    if (((RadioButton) findViewById(answers[i])).isChecked()) {
+                        score += 1;
+                    }
+                    break;
+                case "EditText":
+                    if (((EditText) findViewById(editViews[editsIndex])).getText().toString().equals(
+                            String.valueOf(answers[i])
+                    )) {
+                        score += 1;
+                        editsIndex += 1;
+                    }
+                    break;
+                case "CheckBox":
+                    if (((CheckBox) findViewById(answers[i])).isChecked()) {
+                        score += 1;
+                    }
+                    break;
+                default: break;
+            }
 
-        Log.i("MainActivity", "" + questionOneIsCorrect +
-        " " + questionTwoIsCorrect +
-        " " + questionThreeIsCorrect +
-        " " + questionFourIsCorrect +
-        "\n" + questionFiveIsCorrect +
-        "\n" + questionSixIsCorrect +
-        "\n" + questionSevenIsCorrect);
-
+        }
+        Log.i("MainActivity", "" + score);
+        giveFeedback(score);
     }
 
+    private void giveFeedback(int score) {
+        Toast.makeText(this, "You scored " + score, Toast.LENGTH_SHORT).show();
+    }
 }
