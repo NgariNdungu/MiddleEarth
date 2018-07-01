@@ -8,20 +8,20 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".MainActivity"
-        android:background="@color/colorPrimary">
+        android:background="@color/colorPrimary"
+        tools:context=".MainActivity">
 
         <TextView
             android:id="@+id/app_tag"
+            style="@style/tagStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            style="@style/tagStyle"
-            android:text="@string/app_tag"
+            android:background="@drawable/middleearth"
             android:gravity="center_vertical|center_horizontal"
+            android:text="@string/app_tag"
             android:textColor="@color/colorSecondaryDark"
             android:textSize="32sp"
-            android:background="@drawable/middleearth" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <!-- question 1 - multiple choice -->
         <android.support.v7.widget.CardView
@@ -153,10 +153,10 @@
         <!-- question 4-->
         <android.support.v7.widget.CardView
             android:id="@+id/question4_card"
+            style="@style/cardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/question3_card"
-            style="@style/cardStyle">
+            app:layout_constraintTop_toBottomOf="@id/question3_card">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -181,10 +181,10 @@
         <!-- question 5 - multiple answers -->
         <android.support.v7.widget.CardView
             android:id="@+id/question5_card"
+            style="@style/cardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/question4_card"
-            style="@style/cardStyle">
+            app:layout_constraintTop_toBottomOf="@id/question4_card">
             <LinearLayout
                 android:id="@+id/question5_container"
                 android:layout_width="match_parent"
@@ -227,10 +227,10 @@
         <!-- question 6 - multiple answers -->
         <android.support.v7.widget.CardView
             android:id="@+id/question6_card"
+            style="@style/cardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/question5_card"
-            style="@style/cardStyle">
+            app:layout_constraintTop_toBottomOf="@id/question5_card">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -272,9 +272,9 @@
         <!-- question 7-->
         <android.support.v7.widget.CardView
             android:id="@+id/question7_card"
+            style="@style/cardStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/cardStyle"
             app:layout_constraintTop_toBottomOf="@id/question6_card">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -300,9 +300,9 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/question7_card"
+            android:onClick="getScores"
             android:text="@string/submit"
-            android:onClick="getScores"/>
+            app:layout_constraintTop_toBottomOf="@id/question7_card"/>
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
