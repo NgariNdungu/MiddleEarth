@@ -2,7 +2,6 @@ package com.createchs.middleearth;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -136,6 +135,17 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        Toast.makeText(this, "You scored " + score, Toast.LENGTH_SHORT).show();
+        String message;
+        if (score < 5) {
+            message = getResources().getString(R.string.poor);
+        } else if (score < 7) {
+            message = getResources().getString(R.string.average);
+        } else {
+            message = getResources().getString(R.string.good);
+        }
+
+        String toastMessage = String.format("You scored %s/9. %s",score,message);
+
+        Toast.makeText(this, toastMessage, Toast.LENGTH_LONG).show();
     }
 }
