@@ -1,32 +1,33 @@
 <resources>
     <string name="app_name">Middle Earth</string>
-    <string name="question1">Who \'created\' the world of middle-earth?</string>
+    <string name="question1">1. Who \'created\' the world of middle-earth?</string>
     <string name="question1_option1">J R R Tolkien</string>
     <string name="question1_option2">George R R Martin</string>
 
-    <string name="question2">Who were the oldest beings in middle-earth?</string>
+    <string name="question2">2. Who were the oldest beings in middle-earth?</string>
     <string name="question2_option1">Elves</string>
     <string name="question2_option2">Hobbits</string>
     <string name="question2_option3">Dwarves</string>
     <string name="question2_option4">Men</string>
     <string name="question2_option5">Ents</string>
 
-    <string name="question3" answer="3">How many distinct Elven settlements were there?</string>
+    <string name="question3">3. How many distinct Elven settlements were there?</string>
 
-    <string name="question4">How many of the great rings were given to the race of men?</string>
+    <string name="question4">4. How many of the great rings were given to the race of men?</string>
 
-    <string name="question5">Which craft were the Dwarves best known for?</string>
+    <string name="question5">5. Which craft were the Dwarves best known for?</string>
     <string name="question5_option1">Embroidery</string>
     <string name="question5_option2">Smithing</string>
     <string name="question5_option3">Fishing</string>
     <string name="question5_option4">Mining</string>
 
-    <string name="question6">Who were the sons of the steward of Gondor?</string>
+    <string name="question6">6. Who were the sons of the steward of Gondor?</string>
     <string name="question6_option1">Fraudrin</string>
     <string name="question6_option2">Faramir</string>
     <string name="question6_option3">Boromir</string>
     <string name="question6_option4">Peregrin</string>
-    <string name="question7">How many of the ring-bearers remained in middle-earth after the fall of Mordor?</string>
+
+    <string name="question7">7. How many of the ring-bearers remained in middle-earth after the fall of Mordor?</string>
 
     <string name="submit">submit</string>
     <string name="app_tag">Show that you\'ve walked Middle Earth</string>

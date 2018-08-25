@@ -134,19 +134,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-            <TextView
-                android:id="@+id/question3_label"
-                style="@style/labelStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:labelFor="@id/question3_ans"
-                android:text="@string/question3" />
 
-            <EditText
-                android:id="@+id/question3_ans"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"/>
+                <TextView
+                    android:id="@+id/question3_label"
+                    style="@style/labelStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/question3_ans"
+                    android:text="@string/question3" />
+
+                <EditText
+                    android:id="@+id/question3_ans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -157,23 +158,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/question3_card">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/question4_label"
                     style="@style/labelStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:labelFor="@id/question4_ans"
-                    android:text="@string/question4"/>
+                    android:text="@string/question4" />
 
                 <EditText
                     android:id="@+id/question4_ans"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number"/>
+                    android:inputType="number" />
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -185,23 +188,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/question4_card">
+
             <LinearLayout
                 android:id="@+id/question5_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/question5_label"
                     style="@style/labelStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/question5"/>
+                    android:text="@string/question5" />
 
                 <CheckBox
                     android:id="@+id/question5_option1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/question5_option1"/>
+                    android:text="@string/question5_option1" />
 
                 <CheckBox
                     android:id="@+id/question5_option2"
@@ -219,7 +224,7 @@
                     android:id="@+id/question5_option4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/question5_option4"/>
+                    android:text="@string/question5_option4" />
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -231,40 +236,42 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/question5_card">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/question6_label"
                     style="@style/labelStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/question6"/>
+                    android:text="@string/question6" />
 
                 <CheckBox
                     android:id="@+id/question6_option1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/question6_option1"/>
+                    android:text="@string/question6_option1" />
 
                 <CheckBox
                     android:id="@+id/question6_option2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/question6_option2"/>
+                    android:text="@string/question6_option2" />
 
                 <CheckBox
                     android:id="@+id/question6_option3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/question6_option3"/>
+                    android:text="@string/question6_option3" />
 
                 <CheckBox
                     android:id="@+id/question6_option4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/question6_option4"/>
+                    android:text="@string/question6_option4" />
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -276,33 +283,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/question6_card">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/question7_label"
                     style="@style/labelStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:labelFor="@id/question7_ans"
-                    android:text="@string/question7"/>
+                    android:text="@string/question7" />
 
                 <EditText
                     android:id="@+id/question7_ans"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number"/>
+                    android:inputType="number" />
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
         <Button
+            android:id="@+id/submit_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="getScores"
             android:text="@string/submit"
-            app:layout_constraintTop_toBottomOf="@id/question7_card"/>
+            app:layout_constraintTop_toBottomOf="@id/question7_card" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
